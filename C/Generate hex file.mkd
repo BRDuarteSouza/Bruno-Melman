@@ -1,0 +1,16 @@
+##Generate a .hex file from a .c file  
+
+This simple tutorial explains how to make a .hex file from a code
+in C( -gcc is required).  
+    
+1. Navigate to the folder where the `example.c` and use: 
+
+    `gcc -c example.c`  
+
+    this is goning to compile your code.  
+
+2. Then use `objcopy` which will translate to hex:
+
+    `objcopy --change-address 0xE0000 -O ihex example.o example.x`  
+
+More [information](https://stackoverflow.com/questions/19153192/generating-hex-file-using-gcc).
