@@ -1,0 +1,54 @@
+## Compile and Download for Arm MCU  
+
+1. **Toolchain**:  
+To get the the basics libraries for programm a *STM32f10x*, download the Repository from [Derppening]. Use this folder to find the libraries and include them in your code.  
+
+2. **Compile**:  
+For compliling  
+
+    `arm-none-eabi-gcc example.c address of libraries`  
+
+    if necessary add:  
+
+    `--specs = nosys.specs`  
+    
+    those commands will generate a file named `a.out` from this file you got to transform it into a `.hex`file with the command:  
+
+    `amr-none-eabi-object-copy -O ihex a.out example.hex`  
+
+3. **Download**:  
+Is required to have [stm32flash] installed, after that:  
+
+    `stm32flash -w example.hex -g 0x0 /dev/ttyUSB0`
+
+    Usually **USB0** is the serial port for download but it can other, verify the port with `stm32flash /dev/ttyportname`.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[Derppening]: https://github.com/Derppening/stm32f103
