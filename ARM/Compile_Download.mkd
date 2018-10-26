@@ -6,7 +6,7 @@ To get the the basics libraries for programm a *STM32f10x*, download the Reposit
 2. **Compile**:  
 For compliling  
 
-    `arm-none-eabi-gcc example.c address of libraries`  
+    `arm-none-eabi-gcc example.c -I address of libraries`  
 
     if necessary add:  
 
