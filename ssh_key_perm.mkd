@@ -1,0 +1,16 @@
+## Create a SSH key to access Git
+
+
+Generate the **key**:  
+
+        `ssh-keygen -t rsa -C "any comment"`  
+Go to SSH directory and copy the **key**:  
+
+        `cd`  
+
+        `cat .ssh/id_rsa.pub`  
+
+
+Open your Git and follow the flow blow and paste the **key** and you'll grant permission. 
+
+**Icon-> settings-> sshkeys -> Change keys.** 
