@@ -3,14 +3,22 @@
 
 Generate the **key**:  
 
-        `ssh-keygen -t rsa -C "any comment"`  
+   `ssh-keygen -t rsa -C "any comment"`  
+
 Go to SSH directory and copy the **key**:  
 
-        `cd`  
+   `cd`  
 
-        `cat .ssh/id_rsa.pub`  
+  `cat .ssh/id_rsa.pub`  
 
 
 Open your Git and follow the flow blow and paste the **key** and you'll grant permission. 
 
-**Icon-> settings-> sshkeys -> Change keys.** 
+**Icon-> settings-> sshkeys -> Change keys.**  
+
+After add the *ssh_key* at github, authenticate the key in your machine :  
+
+
+`ssh -T git@github.com`
+
+
